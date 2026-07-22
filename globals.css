@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+  
+  --color-accent-50: #fdf4ff;
+  --color-accent-100: #fae8ff;
+  --color-accent-200: #f5d0fe;
+  --color-accent-300: #f0abfc;
+  --color-accent-400: #e879f9;
+  --color-accent-500: #d946ef;
+  --color-accent-600: #c026d3;
+  --color-accent-700: #a21caf;
+  --color-accent-800: #86198f;
+  --color-accent-900: #701a75;
+
+  --color-warm-50: #fffbeb;
+  --color-warm-100: #fef3c7;
+  --color-warm-200: #fde68a;
+  --color-warm-300: #fcd34d;
+  --color-warm-400: #fbbf24;
+  --color-warm-500: #f59e0b;
+}
+
+/* Base typography */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Article prose styles */
+.prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.prose ul li {
+  list-style-type: disc;
+}
+
+.prose ol li {
+  list-style-type: decimal;
+}
+
+.prose blockquote {
+  border-left: 4px solid #3b82f6;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: #eff6ff;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-style: italic;
+  color: #1e40af;
+}
+
+.prose a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: #1d4ed8;
+}
+
+.prose strong {
+  font-weight: 700;
+  color: #111827;
+}
+
+.prose img {
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.prose code {
+  background: #f1f5f9;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.prose pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Sponsored post badge */
+.sponsored-badge {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+/* Ad placeholder styling */
+.ad-container {
+  border: 2px dashed #d1d5db;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+/* Newsletter CTA */
+.newsletter-cta {
+  background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #c026d3 100%);
+}
+
+/* Affiliate link styling */
+.affiliate-link {
+  background: linear-gradient(to right, #fef3c7, #fde68a);
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+  color: #92400e;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.affiliate-link:hover {
+  background: linear-gradient(to right, #fde68a, #fcd34d);
+  color: #78350f;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
